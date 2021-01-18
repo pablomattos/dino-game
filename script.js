@@ -11,9 +11,7 @@ function handleKeyUp(event){
         }        
     }
 }
-
-function jump() {
-    
+function jump() {    
     isJumping = true;
     let upInterval = setInterval(()=> {
         if (position >= 150 ){
@@ -27,14 +25,12 @@ function jump() {
                     dino.style.bottom = position + 'px';
                 }               
             },20);
-
         }else{
             position += 10;
             dino.style.bottom = position + 'px';
         }        
     }, 20);
 }
-
 function createCactus(){
     const cactus = document.createElement('div');
     let cactusPosition = 1000;
