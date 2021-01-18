@@ -1,5 +1,6 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
+
 let isJumping = false;
 let position = 0;
 
@@ -15,14 +16,12 @@ function jump() {
     
     isJumping = true;
     let upInterval = setInterval(()=> {
-
         if (position >= 150 ){
             clearInterval(upInterval);
             let downInterval = setInterval(() => {
                 if(position <= 0) {
                     clearInterval(downInterval);
                     isJumping = false;
-
                 }else{
                     position -= 10;
                     dino.style.bottom = position + 'px';
